@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student CRUD Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student CRUD Application</h1>
+
+      <!-- Form to add or update student data -->
+      <div class="form-container">
+        <form id="student-form">
+          <input type="hidden" id="student-id" />
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter student name"
+            required
+          />
+
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            placeholder="Enter student age"
+            required
+          />
+
+          <label for="course">Course:</label>
+          <input
+            type="text"
+            id="course"
+            placeholder="Enter student course"
+            required
+          />
+
+          <button type="submit" id="submit-btn">Add Student</button>
+        </form>
+      </div>
+
+      <!-- Table to display student data -->
+      <div class="table-container">
+        <table id="student-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Course</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tablebody">
+            <!-- Dynamic student rows will be added here -->
+          </tbody>
+        </table>
+      </div>
+      <center>
+        <button style="display: none" id="loadmore" type="button">
+          Load More result
+        </button>
+      </center>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
